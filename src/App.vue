@@ -4,6 +4,7 @@ import Landing from './components/Landing.vue'
 </script>
 
 <template>
+  <div></div>
   <!-- NavBar -->
   <!-- BodyWithSide -->
     <!-- Social Links -->
