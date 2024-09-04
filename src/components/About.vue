@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
@@ -27,7 +28,7 @@
             </div>
             <div class="relative mt-6 hidden md:block"> <!-- Converted .portrait-container -->
                 <img class="max-h-[15rem] object-cover rounded-full" 
-                src="../../public/portrait.jpeg" alt="portrait" />
+                src="/src/assets/portrait.jpeg" alt="portrait" />
                 <!-- Converted .portrait-card -->
                 <div class="absolute bg-[#317a23] h-[100px] top-[320px] 
                 left-[220px] -z-10"></div>
