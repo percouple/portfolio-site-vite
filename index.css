@@ -10,7 +10,7 @@ html {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 500;
+  font-weight: 300;
 
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -24,7 +24,7 @@ html {
 }
 
 .custom-svg-rules:hover {
-  transition: all 200ms ease-in;
+  transition: all 100ms ease-in;
   box-shadow: 0px 4px 0 var(--primary-color);
   transform: translate(0px, -4px);
 }

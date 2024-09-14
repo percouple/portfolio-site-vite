@@ -24,7 +24,6 @@ import { projectsData } from '../assets/projectdata';
     box-shadow: -4px 4px var(--tertiary-color);
     margin-bottom: 2rem;
     text-align: left;
-    align-items: left;
     background-color: #bdc4a7;
     border: 2px solid #222222;
     color: #222222;
@@ -35,8 +34,8 @@ import { projectsData } from '../assets/projectdata';
 }
 
 .left-project:hover {
-    box-shadow: -12px 12px var(--tertiary-color);
-    transform: translate(6px, -6px);
+    box-shadow: -10px 10px var(--tertiary-color);
+    transform: translate(3px, -3px);
 }
 
 .right-project {
@@ -45,7 +44,6 @@ import { projectsData } from '../assets/projectdata';
     transition: box-shadow 0.2s, transform 0.2s;
     margin-bottom: 2rem;
     text-align: right;
-    align-items: right;
     background-color: #2e2e2e;
     border: 2px solid #222222;
     margin-left: 10vw;
@@ -54,7 +52,7 @@ import { projectsData } from '../assets/projectdata';
 }
 
 .right-project:hover {
-    box-shadow: 12px 12px var(--secondary-highlight-color);
-    transform: translate(-6px, -6px);
+    box-shadow: 10px 10px var(--secondary-highlight-color);
+    transform: translate(-3px, -3px);
 }
 </style>

@@ -5,8 +5,8 @@
 </script>
 
 <template>
-    <div>
-        <GithubSVG :url="entry.githubUrl"/>
+    <div class="w-full mt-2 flex flex-start">
+        <GithubSVG :url="entry.githubUrl" class="mr-4"/>
         <ProjectLink :url="entry.url"/>
     </div>
 </template>

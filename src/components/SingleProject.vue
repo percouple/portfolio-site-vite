@@ -1,7 +1,6 @@
 <script setup>
-    import { ref } from 'vue';
     import ProjectLinksContainer from './ProjectLinksContainer.vue';
-    const props = defineProps(['entry', 'isRight'])
+    const props = defineProps(['entry'])
 </script>
 
 <template>
@@ -14,7 +13,7 @@
             {{ entry.description }}
         </div>
         <h5>{{ entry.stack }}</h5>
-        <ProjectLinksContainer :entry="entry" :isright="isRight"/>
+        <ProjectLinksContainer :entry="entry"/>
     </div>
 </template>
 
