@@ -1,15 +1,16 @@
 <script setup lang="ts">
-    import { ref } from 'vue';
-    import Project from './SingleProject.vue'
-    import { projectsData } from '../assets/projectdata';
+import Project from './SingleProject.vue'
+import { projectsData } from '../assets/projectdata';
+import GithubSVG from './svg-components/GithubSVG.vue';
 </script>
 
 <template>
     <div>
-        <h2 class="project-header" id="projects">
+        <h2 class="mt-[15rem] scroll-mt-[5rem] ml-[6rem] pl-[14px] pt-[8px] 
+        shadow-lg bg-[#222222] max-w-[33%]" id="projects">
             Here's what I've been working on:
         </h2>
-        <div class="project-container">
+        <div class="flex flex-col max-w-[900px] mx-[3rem] mb-[10rem]">
             <div v-for="(entry, index) in projectsData" :key="entry.id"
                 :class="index % 2 === 0 ? 'left-project' : 'right-project'">
                 <Project :entry="entry" :isRight="index % 2 !== 0" />
@@ -19,4 +20,42 @@
 </template>
 
 <style scoped>
+.left-project {
+    padding: 2rem;
+    box-shadow: -4px 4px var(--tertiary-color);
+    margin-bottom: 2rem;
+    text-align: left;
+    align-items: left;
+    background-color: #bdc4a7;
+    border: 2px solid #222222;
+    color: #222222;
+    margin-right: 10vw;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.left-project:hover {
+    box-shadow: -12px 12px var(--tertiary-color);
+    transform: translate(6px, -6px);
+}
+
+.right-project {
+    padding: 2rem;
+    box-shadow: 4px 4px var(--secondary-highlight-color);
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin-bottom: 2rem;
+    text-align: right;
+    align-items: right;
+    background-color: #2e2e2e;
+    border: 2px solid #222222;
+    margin-left: 10vw;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+}
+
+.right-project:hover {
+    box-shadow: 12px 12px var(--secondary-highlight-color);
+    transform: translate(-6px, -6px);
+}
 </style>
