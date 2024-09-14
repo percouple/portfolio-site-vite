@@ -1,9 +1,7 @@
 <script setup>
     import { ref } from 'vue';
-    import GithubSVG from './svg-components/GithubSVG.vue';
-    // import LinkContainer from './LinkContainer.vue'; // Adjust the import path as necessary
-
-    const props = defineProps(['entry'])
+    import ProjectLinksContainer from './ProjectLinksContainer.vue';
+    const props = defineProps(['entry', 'isRight'])
 </script>
 
 <template>
@@ -16,15 +14,11 @@
             {{ entry.description }}
         </div>
         <h5>{{ entry.stack }}</h5>
-        <!-- <LinkContainer :entry="entry" :isRight="isRight" /> -->
-        <GithubSVG :url="entry.githubUrl"/>
+        <ProjectLinksContainer :entry="entry" :isright="isRight"/>
     </div>
 </template>
 
 
 <style scoped>
-/* You can add component-specific styles here */
-.project-card {
 
-}
 </style>

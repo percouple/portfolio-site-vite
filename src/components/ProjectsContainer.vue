@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import Project from './SingleProject.vue'
+import SingleProject from './SingleProject.vue'
 import { projectsData } from '../assets/projectdata';
-import GithubSVG from './svg-components/GithubSVG.vue';
 </script>
 
 <template>
@@ -13,7 +12,7 @@ import GithubSVG from './svg-components/GithubSVG.vue';
         <div class="flex flex-col max-w-[900px] mx-[3rem] mb-[10rem]">
             <div v-for="(entry, index) in projectsData" :key="entry.id"
                 :class="index % 2 === 0 ? 'left-project' : 'right-project'">
-                <Project :entry="entry" :isRight="index % 2 !== 0" />
+                <SingleProject :entry="entry" :isRight="index % 2 !== 0" />
             </div>
         </div>
     </div>

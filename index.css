@@ -16,3 +16,15 @@ html {
   color: var(--secondary-color);
   min-width: 320px;
 }
+
+.custom-svg-rules {
+  background-color: var(--tertiary-highlight-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.custom-svg-rules:hover {
+  transition: all 200ms ease-in;
+  box-shadow: 0px 4px 0 var(--primary-color);
+  transform: translate(0px, -4px);
+}
