@@ -1,6 +1,6 @@
 <script setup>
-    import GithubSVG from './svg-components/GithubSVG.vue';
-    import ProjectLink from './svg-components/ProjectLink.vue';
+    import GithubSVG from '../svg-components/GithubSVG.vue';
+    import ProjectLink from '../svg-components/ProjectLink.vue';
     const props = defineProps(['entry'])
 </script>
 

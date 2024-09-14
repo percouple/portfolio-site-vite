@@ -1,11 +1,6 @@
 <script setup>
 const props = defineProps(['url'])
-
-console.log(props.url)
-// const urlExists = computed(() => !props.url);
-
 const onClick = () => {
-    console.log(props.url)
     window.location.href = props.url;
 } 
 </script>

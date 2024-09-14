@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import About from './components/About.vue';
-import Landing from './components/Landing.vue';
-import ProjectsContainer from './components/ProjectsContainer.vue';
+import About from './components/main-components/About.vue';
+import Landing from './components/main-components/Landing.vue';
+import ProjectsContainer from './components/main-components/ProjectsContainer.vue';
 </script>
 
 <template >
