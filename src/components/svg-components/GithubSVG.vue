@@ -8,7 +8,7 @@ const onClick = () => {
 </script>
 
 <template>
-    <button class="custom-rules mt-2 p-1 " @click="onClick">
+    <button class="custom-rules mt-2 p-1 border-2" @click="onClick">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="feather feather-github">
@@ -19,15 +19,16 @@ const onClick = () => {
     </button>
 </template>
 
-
 <style scoped>
 .custom-rules {
-    border: 0.2rem solid var(--tertiary-highlight-color);
+    background-color: var(--tertiary-highlight-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .custom-rules:hover {
-    transition: all 300ms ease-in-out;
-    background-color: red;
+    transition: all 200ms ease-in;
+    box-shadow: 0px 4px 0 var(--primary-color);
     transform: translate(0px, -4px);
 }
 </style>
