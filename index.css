@@ -1,0 +1,18 @@
+html {
+  --primary-color: #222222; /* Adjusted RGB values */
+  --secondary-color: #bdc4a7; /* Adjusted RGB values */
+  --secondary-highlight-color: #317a23; /* Adjusted RGB values */
+  --tertiary-color: #f17f29; /* Adjusted RGB values */
+  --tertiary-highlight-color: #5c95ff;
+
+  margin: 0;
+  font-family: "Space Grotesk", "Playfair Display", "Cormorant Garamond",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  min-width: 320px;
+}

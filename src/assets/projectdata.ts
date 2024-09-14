@@ -1,5 +1,5 @@
-import linkedInIcon from "./icons/linkedin.svg";
-import githubIcon from "./icons/github-small-blue.svg";
+// import linkedInIcon from "./icons/linkedin.svg";
+// import githubIcon from "./icons/github-small-blue.svg";
 
 export const projectsData = [
   {
@@ -57,14 +57,14 @@ export const iconLinks = [
   {
     id: 0,
     name: "github",
-    icon: githubIcon,
+    // icon: githubIcon,
     alt: "github link",
     url: "https://github.com/percouple",
   },
   {
     id: 1,
     name: "linkedIn",
-    icon: linkedInIcon,
+    // icon: linkedInIcon,
     alt: "linkedIn link",
     url: "https://www.linkedin.com/in/calebsevan/",
   },

@@ -1,1 +1,13 @@
-<template>Single Project</template>
+<script>
+
+</script>
+
+<template>
+    <div>
+        Single Project
+    </div>
+</template>
+
+<style>
+
+</style>

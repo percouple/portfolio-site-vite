@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import { ref } from 'vue';
-    import Project from './SingleProject'
-    import { projectsData } from '../assets/static-data.js'
+    import Project from './SingleProject.vue'
+    import { projectsData } from '../assets/projectdata';
 </script>
 
 <template>
@@ -18,4 +18,5 @@
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
