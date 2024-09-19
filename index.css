@@ -1,9 +1,9 @@
 html {
-  --primary-color: #222222; /* Adjusted RGB values */
-  --secondary-color: #bdc4a7; /* Adjusted RGB values */
-  --secondary-highlight-color: #317a23; /* Adjusted RGB values */
-  --tertiary-color: #f17f29; /* Adjusted RGB values */
-  --tertiary-highlight-color: #5c95ff;
+  --primary-color: hsl(0, 0%, 13%); /* Adjusted RGB values */
+  --secondary-color: hsl(52, 26%, 72%); /* Adjusted RGB values */
+  --secondary-highlight-color: hsl(109, 55%, 31%); /* Adjusted RGB values */
+  --tertiary-color: hsl(31, 100%, 53%); /* Adjusted RGB values */
+  --tertiary-highlight-color: hsl(220, 78%, 65%);
 
   margin: 0;
   font-family: "Space Grotesk", "Playfair Display", "Cormorant Garamond",

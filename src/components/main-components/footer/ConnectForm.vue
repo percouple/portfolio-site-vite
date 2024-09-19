@@ -1,72 +1,120 @@
 <script setup>
 import { ref } from 'vue';
 
+// State for the form elements
 const form = ref({
     email: '',
     message: '',
 });
 
-const errors = ref({
-    email: '',
-    message: '',
-});
-
+// State for the error messages
+const errorMessage = ref('');
 const isSubmitting = ref(false);
 const successMessage = ref('');
+const submitDisabled = ref(true);
 
 const handleSubmit = async (event) => {
     event.preventDefault();
-    isSubmitting.value = true;
 
-    try {
-        const response = await fetch('https://formspree.io/f/manwnjpz', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(form.value),
-        });
+    if (currentField.value === 'message' && form.value.message) {
 
-        if (response.ok) {
-            successMessage.value = "Thanks for reaching out! I'll get back to you within 2 business days.";
-            form.value = { email: '', message: '' }; // Clear the form
-        } else {
-            const data = await response.json();
-            errors.value = data.errors.reduce((acc, error) => {
-                acc[error.field] = error.message;
-                return acc;
-            }, {});
+        isSubmitting.value = true;
+
+        try {
+            const response = await fetch('https://formspree.io/f/manwnjpz', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(form.value),
+            });
+
+            if (response.ok) {
+                successMessage.value = "Thanks for reaching out! I'll get back to you within 2 business days.";
+                form.value = { email: '', message: '' }; // Clear the form
+            } else {
+                const data = await response.json();
+                errors.value = data.errors.reduce((acc, error) => {
+                    acc[error.field] = error.message;
+                    return acc;
+                }, {});
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+        } finally {
+            isSubmitting.value = false;
         }
-    } catch (error) {
-        console.error('Form submission error:', error);
-    } finally {
-        isSubmitting.value = false;
     }
 };
+
+const currentField = ref('email');
+
+const switchField = () => {
+    switch (true) {
+        case currentField.value === 'email': {
+            if (form.value.email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+                currentField.value = 'message'
+            } else {
+                errorMessage
+            }
+            break;
+        }
+        case currentField.value === 'message': {
+            currentField.value = 'submit'
+            break;
+        }
+    }
+}
 </script>
 
 <template>
-    <div>
-        <form @submit.prevent="handleSubmit" class="flex flex-col mr-8 justify-between h-48">
-            <input v-model="form.email" id="email" type="email" name="email" placeholder="email"
-                class="min-h-5 outline-none p-2 border rounded mb-2" />
-            <p v-if="errors.email" class="text-red-500 text-sm">{{ errors.email }}</p>
 
-            <textarea v-model="form.message" id="message" name="message" placeholder="message"
-                class="min-h-20 min-w-40 outline-none p-2 border rounded mb-2" />
-            <p v-if="errors.message" class="text-red-500 text-sm">{{ errors.message }}</p>
+    <form @submit.prevent="handleSubmit" class="flex flex-col justify-between h-48">
+        <!-- User Email field -->
+        <transition name="fade" >
+            <div v-if="currentField === 'email'">
+                <input v-model="form.email" id="email" type="email" name="email" placeholder="Type your email address"
+                    class="custom-input min-h-5 bg-transparent outline-none p-2 mb-2" />
+                </div>
+            </transition>
+            
+            <!-- User message field -->
+            <transition name="fade">
+                <div v-if="currentField === 'message'">
+                    <textarea v-model="form.message" id="message" name="message" placeholder="message"
+                    class="custom-input min-h-24 min-w-40 bg-transparent outline-none p-2 mb-2" />
+                </div>
+            </transition>
+            
+            <!-- Submit Button -->
+            <p v-if="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
+        
+        <div>
+            <div v-if="currentField === 'message' && form.message">
+                <button type="submit" :disabled="isSubmitting"
+                    class="custom-submit-button min-h-8 min-w-40 font-medium py-2 px-4 
+                    rounded disabled:opacity-50">
+                    Connect!
+                </button>
+            </div>
+            <button v-if="currentField === 'email'" @click="switchField">Right Arrow</button>
+        </div>
 
-            <button type="submit" :disabled="isSubmitting"
-                class="min-h-8 min-w-40 bg-blue-500 text-white font-medium py-2 px-4 rounded hover:bg-blue-600 disabled:opacity-50">
-                Connect!
-            </button>
+        <p v-if="successMessage" class="mt-2">{{ successMessage }}</p>
+    </form>
 
-            <p v-if="successMessage" class="text-green-500 mt-2">{{ successMessage }}</p>
-        </form>
-    </div>
 </template>
 
 
 <style scoped>
-/* Tailwind CSS classes are used, so no additional styles needed */
+.custom-submit-button {
+    background-color: var(--tertiary-highlight-color);
+    color: var(--primary-color);
+}
+
+.custom-input {
+    color: var(--secondary-color);
+    border-bottom: solid 2px var(--secondary-color);
+    scrollbar-width: 0px;
+}
 </style>

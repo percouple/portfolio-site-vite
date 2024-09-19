@@ -30,7 +30,7 @@ const submitHandler = (e) => {
     <div id="connect" class="text-center pb-6">
         <h3 class="text-2xl font-semibold mb-4">Questions? Or looking to collaborate?</h3>
         <h4 class="text-xl font-medium mb-6">Connect with me here!</h4>
-        <div class="mx-auto max-w-2xl flex justify-center">
+        <div class="mx-auto flex justify-center">
             <ConnectForm :changeHandler="changeHandler" :submitHandler="submitHandler" />
         </div>
         <Footer /> 
@@ -39,5 +39,4 @@ const submitHandler = (e) => {
 
 
 <style scoped>
-/* Tailwind CSS classes are used, so additional styling is not needed here */
 </style>
