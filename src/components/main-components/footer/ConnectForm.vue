@@ -30,6 +30,7 @@ const handleSubmit = async (event) => {
             });
 
             if (response.ok) {
+                currentField.value = 'success';
                 successMessage.value = "Thanks for reaching out! I'll get back to you within 2 business days.";
                 form.value = { email: '', message: '' }; // Clear the form
             } else {
@@ -44,6 +45,11 @@ const handleSubmit = async (event) => {
         } finally {
             isSubmitting.value = false;
         }
+
+        // Set the field back to email
+        setTimeout(() => {
+            currentField.value = 'email';
+        }, 4000)
     }
 };
 
@@ -60,7 +66,6 @@ const switchField = () => {
             break;
         }
         case currentField.value === 'message': {
-            currentField.value = 'submit'
             break;
         }
     }
@@ -100,7 +105,7 @@ const switchField = () => {
             <button v-if="currentField === 'email'" @click="switchField">Right Arrow</button>
         </div>
 
-        <p v-if="successMessage" class="mt-2">{{ successMessage }}</p>
+        <p v-if="currentField === 'success'" class="mt-2">{{ successMessage }}</p>
     </form>
 
 </template>
