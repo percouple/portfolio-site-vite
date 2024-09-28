@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SingleProject from './SingleProject.vue';
+import SingleProject from './SingleProject.vue'
 import { projectsData } from '../../assets/projectdata';
 </script>
 

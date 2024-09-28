@@ -76,28 +76,27 @@ const switchField = () => {
 
     <form @submit.prevent="handleSubmit" class="flex flex-col justify-between h-48">
         <!-- User Email field -->
-        <transition name="fade" >
+        <Transition name="slide-fade">
             <div v-if="currentField === 'email'">
                 <input v-model="form.email" id="email" type="email" name="email" placeholder="Type your email address"
                     class="custom-input min-h-5 bg-transparent outline-none p-2 mb-2" />
-                </div>
-            </transition>
-            
-            <!-- User message field -->
-            <transition name="fade">
-                <div v-if="currentField === 'message'">
-                    <textarea v-model="form.message" id="message" name="message" placeholder="message"
+            </div>
+        </Transition>
+
+        <!-- User message field -->
+        <Transition name="slide-fade">
+            <div v-if="currentField === 'message'">
+                <textarea v-model="form.message" id="message" name="message" placeholder="message"
                     class="custom-input min-h-24 min-w-40 bg-transparent outline-none p-2 mb-2" />
-                </div>
-            </transition>
-            
-            <!-- Submit Button -->
-            <p v-if="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
-        
+            </div>
+        </Transition>
+
+        <!-- Submit Button -->
+        <p v-if="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
+
         <div>
             <div v-if="currentField === 'message' && form.message">
-                <button type="submit" :disabled="isSubmitting"
-                    class="custom-submit-button min-h-8 min-w-40 font-medium py-2 px-4 
+                <button type="submit" :disabled="isSubmitting" class="custom-submit-button min-h-8 min-w-40 font-medium py-2 px-4 
                     rounded disabled:opacity-50">
                     Connect!
                 </button>
@@ -121,5 +120,20 @@ const switchField = () => {
     color: var(--secondary-color);
     border-bottom: solid 2px var(--secondary-color);
     scrollbar-width: 0px;
+}
+
+.slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+    /* transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1); */
+    transition: all 0.8s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(-20px);
+    opacity: 0;
 }
 </style>

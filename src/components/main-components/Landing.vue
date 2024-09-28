@@ -7,10 +7,10 @@
   bg-[#222222] pb-[13px] scroll-mt-[25vh]">
     <div class="flex flex-col" id="home">
       <div class="ml-[20px]">
-        <h3 class="mb-0 italic text-lg">
+        <h3 class="mb-0 ml-16 italic text-lg">
           Hello, I'm
         </h3>
-        <div class="text-[#f17f29] text-[8rem] m-0 
+        <div class="text-[#f17f29] ml-20 text-[8rem] 
         custom-shadow">
           Caleb.</div>
       </div>
