@@ -28,3 +28,13 @@ html {
   box-shadow: 0px 4px 0 var(--primary-color);
   transform: translate(0px, -4px);
 }
+
+.test-borderr {
+  border: 2px solid red;
+}
+.test-borderb {
+  border: 2px solid blue;
+}
+.test-borderg {
+  border: 2px solid green;
+}

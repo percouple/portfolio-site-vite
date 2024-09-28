@@ -6,7 +6,7 @@
     <div id="about" class="scroll-mt-[10vh] pl-12">
         <div class="flex justify-end">
             <div
-                class="font-extrabold text-2xl mr-[10%] text-right 
+                class="font-extralight italic text-2xl mr-[10%] text-right 
                 shadow-[6px_-3px_0_#317a23] p-2 w-[50%]">
                 About me
             </div>
@@ -14,7 +14,7 @@
         <div class="flex flex-wrap items-center justify-center m-8"> <!-- Converted .welcome-card -->
             <div class="text-left p-1 mb-12 shadow-[-20px_10px_0_#5c95ff]"> <!-- Converted .about-card -->
                 <div class="text-base p-4 bg-[#bdc4a7] text-[#222222] 
-                            pt-8 max-w-[300px]">
+                            pt-4 max-w-[300px]">
                     I’m a professional software engineer interested in creating
                     experiences that educate and simplify. I'm all about small 
                     tweaks that make the little things in life just a bit better.

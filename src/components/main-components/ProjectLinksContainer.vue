@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="w-full mt-2 flex flex-start">
+    <div class="w-contain mt-2 flex flex-start">
         <GithubSVG :url="entry.githubUrl" class="mr-4"/>
         <ProjectLink :url="entry.url"/>
     </div>

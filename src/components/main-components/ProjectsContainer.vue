@@ -4,8 +4,9 @@ import { projectsData } from '../../assets/projectdata';
 </script>
 
 <template>
-    <div>
-        <p class="text-2xl mt-[15rem] scroll-mt-[5rem] ml-[6rem] pl-[14px] pt-[8px]" 
+    <div class="flex flex-col max-w-[1000px]">
+        <p class="text-2xl mt-[15rem] scroll-mt-[5rem] ml-[6rem] pl-[14px] pt-[8px]
+        custom-shadow max-w-[450px] italic"
         id="projects">
             Here's what I've been working on:
         </p>
@@ -54,5 +55,9 @@ import { projectsData } from '../../assets/projectdata';
 .right-project:hover {
     box-shadow: 10px 10px var(--secondary-highlight-color);
     transform: translate(-3px, -3px);
+}
+
+.custom-shadow {
+    box-shadow: -4px -2px var(--tertiary-highlight-color);
 }
 </style>

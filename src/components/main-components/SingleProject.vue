@@ -5,15 +5,17 @@
 
 <template>
     <div>
-        <h3 class="text-2xl mb-2 underline">{{ entry.name }}</h3>
-        <h5 class="text-base mb-2 italic">
+        <h3 class="text-2xl underline">{{ entry.name }}</h3>
+        <h5 class="text-base italic">
             {{ entry.complete ? '' : 'In progress' }}
         </h5>
-        <div class="text-base mb-1">
+        <div class="text-base mb-1 mt-6">
             {{ entry.description }}
         </div>
-        <h5 class="text-sm font-bold">[{{ entry.stack }}]</h5>
-        <ProjectLinksContainer :entry="entry"/>
+        <div class="flex justify-between items-center mt-2">
+            <ProjectLinksContainer :entry="entry"/>
+            <h5 class="text-sm font-bold hidden sm:flex">[{{ entry.stack }}]</h5>
+        </div>
     </div>
 </template>
 

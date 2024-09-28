@@ -6,7 +6,7 @@ import ProjectsContainer from './components/main-components/ProjectsContainer.vu
 </script>
 
 <template>
-  <div class="general-styles">
+  <div class="flex flex-col justify-center items-center">
     <!-- NavBar -->
     <!-- BodyWithSide -->
     <!-- Social Links -->

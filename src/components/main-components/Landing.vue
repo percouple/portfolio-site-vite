@@ -3,27 +3,25 @@
 </script>
 
 <template>
-  <div class="flex justify-center mt-[13rem] mb-[18rem] pb-[13px] scroll-mt-[25vh]">
-    <div class="flex flex-col" id="home">
-      <div class="ml-[20px]">
-        <h3 class="mb-0 ml-16 italic text-lg">
-          Hello, I'm
-        </h3>
-        <div class="text-[#f17f29] ml-20 text-[8rem] 
+  <div id="home" class="flex flex-col justify-center items-center mt-[13rem] mx-8
+  mb-[18rem] scroll-mt-[25vh] max-w-[96%] sm:max-w-[88%] md:max-w-[75%] lg:max-w-[60%]">
+    <div class="w-full">
+      <h3 class="italic text-lg">
+        Hello, I'm
+      </h3>
+      <div class="text-[#f17f29] font-bold italic text-[8rem] 
         custom-shadow">
-          Caleb.</div>
-      </div>
-      <div class="flex justify-end text-[1rem] text-right 
-        p-[8px] ml-[30%]
-        shadow-[2px_2px_0px_#5c95ff] max-w-[50%]">
-        I'm a software developer eager to craft
-        engaging experiences tailored
-        for entry-level learners. <br></br>
-        <br></br>Currently, I'm building projects geared
-        towards expanding my proficiency across various
-        coding languages and platforms, enriching
-        my versatility in software development.
-      </div>
+        Caleb.</div>
+    </div>
+    <div class="flex justify-end text-[1rem] text-right 
+        p-[8px] shadow-[2px_2px_0px_#5c95ff]">
+      I'm a software developer eager to craft
+      engaging experiences tailored
+      for entry-level learners. <br></br>
+      <br></br>Currently, I'm building projects geared
+      towards expanding my proficiency across various
+      coding languages and platforms, enriching
+      my versatility in software development.
     </div>
   </div>
 </template>
