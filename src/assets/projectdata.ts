@@ -3,6 +3,18 @@
 
 export const projectsData = [
   {
+    id: 1,
+    date: "03-14-2024",
+    complete: false,
+    name: "Habit Tracker",
+    url: false,
+    githubUrl: "https://github.com/percouple/multiwatch-next",
+    description:
+      "A browser application for keeping track of weekly time spent on projects. This was developed shortly after I moved to freelance work.",
+    imgUrl: "",
+    stack: "Typescript, React.js, HTML, TailwindCSS, Next.js, Prisma, SQLite3",
+  },
+  {
     id: 5,
     date: "05-02-2024",
     complete: true,
@@ -12,7 +24,19 @@ export const projectsData = [
     description:
       "A platform for asylum seekers, government officials, and statisticians to interact with publicly available statistics on the grant rates of asylum seekers in the US.",
     imgUrl: "",
-    stack: "JS, CSS, React, Jest, HRF API, Axios",
+    stack: "JS, CSS, React, Jest, HRF REST API, Axios",
+  },
+  {
+    id: 2,
+    date: "01-30-2024",
+    complete: true,
+    name: "NASA Image Generator",
+    url: 'https://nasa-search-bkgd8486y-calebs-projects-599a8c0f.vercel.app/',
+    githubUrl: "https://github.com/percouple/NASA-photo-of-the-day",
+    description:
+      "Generates publicly available images of NASA, astronauts, space, and more using axios to fetch from the NASA API.",
+    imgUrl: "./projects-files/NASA.png",
+    stack: "JS, React.js, HTML, CSS, Axios, Jest, Vite",
   },
   {
     id: 4,
@@ -25,31 +49,6 @@ export const projectsData = [
       "Easily accessible metronome for universal use on desktops. Utilizing primarily Java for this build, I'm constructing a product that aims to be quick, efficient, effective, and easy to use.",
     imgUrl: "",
     stack: "Java, Maven",
-  },
-  {
-    id: 2,
-    date: "01-30-2024",
-    complete: true,
-    name: "NASA Image Generator",
-    url: 'https://nasa-search-bkgd8486y-calebs-projects-599a8c0f.vercel.app/',
-    githubUrl: "https://github.com/percouple/NASA-photo-of-the-day",
-    description:
-      "Generates publicly available images of NASA, astronauts, space, and more using axios to fetch from the NASA API.",
-    imgUrl: "./projects-files/NASA.png",
-    stack: "JS, React.js, HTML, CSS, Axios, Jest",
-  },
-
-  {
-    id: 1,
-    date: "03-14-2024",
-    complete: false,
-    name: "Browser Timesheet",
-    url: false,
-    githubUrl: "https://github.com/percouple/personal-timesheet.1",
-    description:
-      "A browser application for keeping track of weekly time spent on projects. This was developed shortly after I moved to freelance work.",
-    imgUrl: "",
-    stack: "JS, React.js, HTML, CSS, Node, Auth0",
   },
 ];
 
