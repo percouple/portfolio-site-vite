@@ -6,8 +6,8 @@
     <div id="about" class="scroll-mt-[10vh] pl-12">
         <div class="flex justify-end">
             <div
-                class="font-extrabold text-2xl mr-[10%] text-right bg-[#222222] 
-                shadow-[8px_-4px_0_#317a23] p-2 w-[50%]">
+                class="font-extrabold text-2xl mr-[10%] text-right 
+                shadow-[6px_-3px_0_#317a23] p-2 w-[50%]">
                 About me
             </div>
         </div>
@@ -26,14 +26,14 @@
                     products that stand up to rigorous testing.
                 </div>
             </div>
-            <div class="relative mt-6 hidden md:block"> <!-- Converted .portrait-container -->
-                <img class="max-h-[15rem] object-cover rounded-full" 
+            <div class="relative mt-6 hidden sm:block"> <!-- Converted .portrait-container -->
+                <img class="max-h-[15rem] object-cover photo-circle" 
                 src="/src/assets/portrait.jpeg" alt="portrait" />
                 <!-- Converted .portrait-card -->
                 <div class="absolute bg-[#317a23] h-[100px] top-[320px] 
                 left-[220px] -z-10"></div>
                 <!-- Converted .portrait-liner -->
-                <div class="absolute bg-[#222222] w-[150px] h-[100px] 
+                <div class="absolute w-[150px] h-[100px] 
                 top-[315px] left-[65px] -z-5"></div>
                 <!-- Converted .portrait-liner-background -->
             </div>
@@ -42,4 +42,8 @@
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.photo-circle {
+    clip-path: circle(40%);
+}
+</style>

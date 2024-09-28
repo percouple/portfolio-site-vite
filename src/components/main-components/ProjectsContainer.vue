@@ -5,10 +5,10 @@ import { projectsData } from '../../assets/projectdata';
 
 <template>
     <div>
-        <h2 class="mt-[15rem] scroll-mt-[5rem] ml-[6rem] pl-[14px] pt-[8px] 
-        shadow-lg bg-[#222222] max-w-[33%]" id="projects">
+        <p class="text-2xl mt-[15rem] scroll-mt-[5rem] ml-[6rem] pl-[14px] pt-[8px]" 
+        id="projects">
             Here's what I've been working on:
-        </h2>
+        </p>
         <div class="flex flex-col max-w-[900px] mx-[3rem] mb-[10rem]">
             <div v-for="(entry, index) in projectsData" :key="entry.id"
                 :class="index % 2 === 0 ? 'left-project' : 'right-project'">
