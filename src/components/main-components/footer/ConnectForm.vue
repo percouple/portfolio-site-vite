@@ -103,6 +103,13 @@ const switchField = () => {
                     Connect!
                 </button>
             </div>
+            <div v-else-if="currentField === 'message' && !form.message">
+                <button type="submit" :disabled="isSubmitting" class="custom-submit-button-disabled min-h-8 
+                min-w-40 font-medium py-2 px-4
+                    rounded disabled:opacity-50">
+                    Connect!
+                </button>
+            </div>
             <div v-if="currentField === 'email'" @click="switchField">
                 <RightArrow />
             </div>
@@ -116,6 +123,11 @@ const switchField = () => {
 
 <style scoped>
 .custom-submit-button {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.custom-submit-button-disabled {
     background-color: var(--tertiary-highlight-color);
     color: var(--primary-color);
 }
