@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div id="about" class="scroll-mt-[10vh] pl-12">
+    <div id="about" class="scroll-mt-[10vh] pl-12 fade-in">
         <div class="flex justify-end">
             <div
                 class="font-extralight italic text-2xl mr-[10%] text-right 
