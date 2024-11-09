@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import RightArrow from '../../svg-components/RightArrow.vue';
 
 // State for the form elements
 const form = ref({
@@ -96,12 +97,15 @@ const switchField = () => {
 
         <div>
             <div v-if="currentField === 'message' && form.message">
-                <button type="submit" :disabled="isSubmitting" class="custom-submit-button min-h-8 min-w-40 font-medium py-2 px-4 
+                <button type="submit" :disabled="isSubmitting" class="custom-submit-button min-h-8 
+                min-w-40 font-medium py-2 px-4 
                     rounded disabled:opacity-50">
                     Connect!
                 </button>
             </div>
-            <button v-if="currentField === 'email'" @click="switchField">Right Arrow</button>
+            <div v-if="currentField === 'email'" @click="switchField">
+                <RightArrow />
+            </div>
         </div>
 
         <p v-if="currentField === 'success'" class="mt-2">{{ successMessage }}</p>

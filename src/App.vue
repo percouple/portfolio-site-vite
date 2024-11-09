@@ -15,7 +15,7 @@ import ProjectsContainer from './components/main-components/ProjectsContainer.vu
     <!-- Projects -->
     <ProjectsContainer />
     <!-- Connect -->
-     <Connect />
+    <Connect />
     <!-- BodyWithSide -->
   </div>
 </template>
