@@ -1,6 +1,3 @@
-// import linkedInIcon from "./icons/linkedin.svg";
-// import githubIcon from "./icons/github-small-blue.svg";
-
 export const projectsData = [
   {
     id: 1,
@@ -32,11 +29,11 @@ export const projectsData = [
     complete: true,
     name: "NASA Image Generator",
     url: 'https://nasa-search-bkgd8486y-calebs-projects-599a8c0f.vercel.app/',
-    githubUrl: "https://github.com/percouple/NASA-photo-of-the-day",
+    githubUrl: "https://github.com/percouple/nasa-search-vite",
     description:
       "Generates publicly available images of NASA, astronauts, space, and more using axios to fetch from the NASA API.",
     imgUrl: "./projects-files/NASA.png",
-    stack: "JS, React.js, HTML, CSS, Axios, Jest, Vite",
+    stack: "Typescript, React.js, HTML, CSS, Axios, Jest, Vite",
   },
   {
     id: 4,
@@ -87,5 +84,6 @@ export const blogData = [
 ];
 
 export const techStack = [
-  'JavaScript', 'Java', 'HTML5', 'CSS3', 'React.js', 'Node.js', 'Next.js'
+  'JavaScript', 'Java', 'HTML5', 'CSS3', 'React.js', 'Node.js', 
+  'Next.js', 'Prisma', 'SQLite3', 'Python',
 ]
