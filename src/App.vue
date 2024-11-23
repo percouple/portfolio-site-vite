@@ -13,7 +13,7 @@ const authenticated = ref(false);
   <div v-if="!authenticated">
     <PasswordPage :authenticated="authenticated" />
   </div>
-  <div v-if="authenticated" class="flex flex-col justify-center items-center">
+  <div v-if="!authenticated" class="flex flex-col justify-center items-center">
     <!-- NavBar -->
     <!-- BodyWithSide -->
     <!-- Social Links -->
