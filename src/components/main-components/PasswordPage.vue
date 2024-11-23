@@ -5,8 +5,8 @@ const userInput = ref('');
 </script>
 
 <template>
-    <div className="flex flex-col justify-center items-center h-[100vh] test-borderr">
-        <div className="test-borderg max-w-[50%]">
+    <div className="flex flex-col justify-center items-center h-[100vh]">
+        <div className="max-w-[50%]">
             <div className="font-bold text-3xl ">Welcome! </div>
             <div className="text-md mt-4">Please enter the password you were given with the request</div>
             <input className="max-h-7 mt-6 custom-input" placeholder="password" />
